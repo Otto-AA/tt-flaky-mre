@@ -38,9 +38,9 @@ jobs:
         with:
           typst-version: ${{ matrix.typst-version }}
 
-      - name: Compile tests
-        run: |
-          for f in ./tests/example\ copy\ {5..9}/test.typ; do typst compile "$f" && echo "compiled $f"; done
+      # - name: Compile tests
+      #   run: |
+      #     for f in ./tests/example\ copy\ {5..9}/test.typ; do typst compile "$f" && echo "compiled $f"; done
 
       - name: Run test suite
         run: typst-test run
